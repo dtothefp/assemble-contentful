@@ -1,0 +1,15 @@
+{
+  "name": "assemble-contentful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "assemble": "0.6.0-beta.5",
+    "gulp-extname": "^0.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
