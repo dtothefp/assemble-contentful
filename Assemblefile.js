@@ -1,6 +1,7 @@
 var path = require('path');
 var assemble = require('assemble');
 var ext = require('gulp-extname');
+var contentful = require('./utils/plugins/contentful');
 var src = path.join(__dirname, 'src');
 
 function generateKey(fp) {
@@ -26,6 +27,7 @@ assemble.task('pages', function() {
     .on('end', function () {
       console.log('finished rendering pages');
     })
+    .pipe(contentful(assemble))
     .pipe(ext())
     .pipe(assemble.dest(path.join('dist/')))
 });
